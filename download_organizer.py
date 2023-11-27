@@ -1,5 +1,4 @@
 import os
-import shutil
 import glob
 
 #move test jpg from download to pictures folder
@@ -8,29 +7,6 @@ source = "/users/nickp/downloads/"
 destination = "/users/nickp/downloads/pictures/test/"
 img_dest = "/users/nickp/downloads/images/"
 pdf_dest = "/users/nickp/downloads/pdfs/"
-
-
-
-# Check if destination folder exists, if not, create one
-
-# Previous code that moves a specified file to a specified location
-
-# if os.path.exists(source + file_name): 
-#     print(f"File {file_name} found")
-#     if os.path.exists(destination) == False:
-#         print(f"{destination} does not exist, creating path")
-#         os.mkdir(destination)
-#     else:
-#         print(f"{destination} exists, moving {file_name}")
-
-#     os.replace(source + file_name, destination + file_name)
-
-#     if os.path.exists(destination + file_name):
-#         print(f"You have moved {file_name} from {source} to {destination}")
-#     else:
-#         print(f"Moving {file_name} from {source} to {destination} has FAILED")
-# else:
-#     print(f"File {file_name} not found, please correct this.")
 
 #move all .jpgs and .pngs to /download/images
 
@@ -90,3 +66,22 @@ for file in all_files:
         print(f"Folder for extension doesn't exist, creating now.")
     # print( source + file_extension[1:] +"/"+ os.path.basename(file))
     os.replace(file, source + file_extension[1:] +"/"+ os.path.basename(file))
+
+# Previous code that moves a specified file to a specified location
+
+# if os.path.exists(source + file_name): 
+#     print(f"File {file_name} found")
+#     if os.path.exists(destination) == False:
+#         print(f"{destination} does not exist, creating path")
+#         os.mkdir(destination)
+#     else:
+#         print(f"{destination} exists, moving {file_name}")
+
+#     os.replace(source + file_name, destination + file_name)
+
+#     if os.path.exists(destination + file_name):
+#         print(f"You have moved {file_name} from {source} to {destination}")
+#     else:
+#         print(f"Moving {file_name} from {source} to {destination} has FAILED")
+# else:
+#     print(f"File {file_name} not found, please correct this.")
